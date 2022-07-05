@@ -1,17 +1,19 @@
 import * as React from "react";
-import * as styles from "./Layout.module.css";
-import Navbar from "./Navbar";
+import GlobalStyles from "../styles/GlobalStyles";
 import Title from "./Title";
+import Navbar from "./Navbar";
+import Main from "./Main";
 import "@fontsource/suez-one";
 import "@fontsource/poppins";
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div>
+    <>
+      <GlobalStyles />
       <Title pageTitle={pageTitle} />
       <Navbar />
-      <main className={styles.main}>{children}</main>
-    </div>
+      <Main children={children} />
+    </>
   );
 };
 

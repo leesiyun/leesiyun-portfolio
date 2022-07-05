@@ -9,5 +9,6 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-fontawesome-css",
+    "gatsby-plugin-styled-components",
   ],
 };

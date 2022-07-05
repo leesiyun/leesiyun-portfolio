@@ -2,36 +2,28 @@ import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as SoildIcons from "@fortawesome/free-solid-svg-icons";
-import * as styles from "./Navbar.module.css";
+import styledComponents from "../styles/Navbar.styled";
+import { urlData } from "../assets/urlData";
+
+const { NavbarStyle, Logo, NavLinks, MoblieMenuIcon } = styledComponents;
 
 const Navbar = () => {
   const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
   return (
-    <nav className={styles.navbar}>
+    <NavbarStyle>
       <Link to="/">
-        <h3 className={styles.logo}>SIYUN</h3>
+        <Logo>SIYUN</Logo>
       </Link>
-      <ul
-        className={mobileMenuToggle ? styles.navLinksToggle : styles.navLinks}
-      >
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/blog">Blog</Link>
-        </li>
-        <li>
-          <Link to="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link to="/learn">Learn</Link>
-        </li>
-        <li>
-          <Link to="/carrer">Carrer</Link>
-        </li>
-      </ul>
-      <button
-        className={styles.mobileMenuIcon}
+      <NavLinks mobileMenuToggle={mobileMenuToggle}>
+        {urlData.map((url) => {
+          return (
+            <li key={url.title}>
+              <Link to={url.path}>{url.title}</Link>
+            </li>
+          );
+        })}
+      </NavLinks>
+      <MoblieMenuIcon
         onClick={() => setMobileMenuToggle((currentValue) => !currentValue)}
       >
         {mobileMenuToggle ? (
@@ -39,8 +31,8 @@ const Navbar = () => {
         ) : (
           <FontAwesomeIcon icon={SoildIcons.faBars} />
         )}
-      </button>
-    </nav>
+      </MoblieMenuIcon>
+    </NavbarStyle>
   );
 };
 

@@ -1,0 +1,22 @@
+export const urlData = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+  {
+    title: "Projects",
+    path: "/projects",
+  },
+  {
+    title: "Learn",
+    path: "/learn",
+  },
+  {
+    title: "Carrer",
+    path: "/carrer",
+  },
+];
