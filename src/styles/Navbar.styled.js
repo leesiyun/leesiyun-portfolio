@@ -10,7 +10,7 @@ const NavbarStyle = styled.nav`
 
 const Logo = styled.h3`
   font-size: 180%;
-  padding-left: 15px;
+  padding-left: 10px;
   font-family: "Suez One", serif;
 `;
 
@@ -24,7 +24,10 @@ const NavLinks = styled.ul`
   }
 
   @media (max-width: 768px) {
-    display: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "block" : "none")};
+    display: block;
+    opacity: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "1" : "0")};
+    visibility: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "" : "hidden")};
+    transition: opacity 0.2s;
     position: absolute;
     box-shadow: rgba(50, 50, 93, 0.23) 0 20px 20px -20px;
     left: 0;
@@ -41,24 +44,10 @@ const NavLinks = styled.ul`
   }
 `;
 
-const MoblieMenuIcon = styled.button`
-  border: none;
-  background: none;
-  font-size: 20px;
-  display: none;
-  @media (max-width: 768px) {
-    position: absolute;
-    display: block;
-    right: 45px;
-    font-size: 190%;
-  }
-`;
-
 const styledComponents = {
   NavbarStyle,
   Logo,
   NavLinks,
-  MoblieMenuIcon,
 };
 
 export default styledComponents;

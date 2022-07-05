@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "gatsby";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import * as SoildIcons from "@fortawesome/free-solid-svg-icons";
 import styledComponents from "../styles/Navbar.styled";
 import { urlData } from "../assets/urlData";
+import MoblieBurgerMenu from "./MoblieBurgerMenu";
 
-const { NavbarStyle, Logo, NavLinks, MoblieMenuIcon } = styledComponents;
+const { NavbarStyle, Logo, NavLinks } = styledComponents;
 
-const Navbar = () => {
-  const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
+const Navbar = ({ mobileMenuToggle, showMobileMenuToggle }) => {
   return (
     <NavbarStyle>
       <Link to="/">
@@ -18,20 +16,17 @@ const Navbar = () => {
         {urlData.map((url) => {
           return (
             <li key={url.title}>
-              <Link to={url.path}>{url.title}</Link>
+              <Link to={url.path} activeStyle={{ color: "#f6ab00" }}>
+                {url.title}
+              </Link>
             </li>
           );
         })}
       </NavLinks>
-      <MoblieMenuIcon
-        onClick={() => setMobileMenuToggle((currentValue) => !currentValue)}
-      >
-        {mobileMenuToggle ? (
-          <FontAwesomeIcon icon={SoildIcons.faXmark} />
-        ) : (
-          <FontAwesomeIcon icon={SoildIcons.faBars} />
-        )}
-      </MoblieMenuIcon>
+      <MoblieBurgerMenu
+        mobileMenuToggle={mobileMenuToggle}
+        showMobileMenuToggle={showMobileMenuToggle}
+      />
     </NavbarStyle>
   );
 };

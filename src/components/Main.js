@@ -10,8 +10,9 @@ const MainStyle = styled.main`
   padding-top: 100px;
 `;
 
-const Main = ({ children }) => {
-  return <MainStyle>{children}</MainStyle>;
+const Main = ({ children, setMobileMenuToggle }) => {
+  const hiddenMobileMenuToggle = () => setMobileMenuToggle(false);
+  return <MainStyle onClick={hiddenMobileMenuToggle}>{children}</MainStyle>;
 };
 
 export default Main;
