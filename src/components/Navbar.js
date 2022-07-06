@@ -6,13 +6,13 @@ import MoblieBurgerMenu from "./MoblieBurgerMenu";
 
 const { NavbarStyle, Logo, NavLinks } = styledComponents;
 
-const Navbar = ({ mobileMenuToggle, showMobileMenuToggle }) => {
+const Navbar = ({ pageTitle, mobileMenuToggle, showMobileMenuToggle }) => {
   return (
-    <NavbarStyle>
+    <NavbarStyle pageTitle={pageTitle}>
       <Link to="/">
         <Logo>SIYUN</Logo>
       </Link>
-      <NavLinks mobileMenuToggle={mobileMenuToggle}>
+      <NavLinks pageTitle={pageTitle} mobileMenuToggle={mobileMenuToggle}>
         {urlData.map((url) => {
           return (
             <li key={url.title}>

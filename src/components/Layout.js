@@ -5,6 +5,8 @@ import Navbar from "./Navbar";
 import Main from "./Main";
 import "@fontsource/suez-one";
 import "@fontsource/poppins";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/700.css";
 
 const Layout = ({ pageTitle, children }) => {
   const [mobileMenuToggle, setMobileMenuToggle] = useState(false);
@@ -14,6 +16,7 @@ const Layout = ({ pageTitle, children }) => {
       <GlobalStyles />
       <Title pageTitle={pageTitle} />
       <Navbar
+        pageTitle={pageTitle}
         mobileMenuToggle={mobileMenuToggle}
         showMobileMenuToggle={showMobileMenuToggle}
       />

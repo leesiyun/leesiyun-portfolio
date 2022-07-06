@@ -1,9 +1,5 @@
 export const urlData = [
   {
-    title: "Home",
-    path: "/",
-  },
-  {
     title: "Blog",
     path: "/blog",
   },

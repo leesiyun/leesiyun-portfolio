@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 const NavbarStyle = styled.nav`
-  height: 8vh;
   display: flex;
+  height: 8vh;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px 0 30px;
+  padding: 35px 30px;
+  width: 100%;
+  background-color: ${({ pageTitle }) =>
+    pageTitle === "Home" ? "#f6ab00" : ""};
 `;
 
 const Logo = styled.h3`
-  font-size: 180%;
-  padding-left: 10px;
+  font-size: 2.7rem;
+  padding-left: 1vw;
   font-family: "Suez One", serif;
 `;
 
@@ -18,8 +21,9 @@ const NavLinks = styled.ul`
   display: flex;
   li {
     color: black;
-    font-size: 18px;
-    padding: 0 20px 0 0;
+    font-weight: 500;
+    font-size: 1.7rem;
+    padding: 0 0 0 20px;
     cursor: pointer;
   }
 
@@ -31,15 +35,16 @@ const NavLinks = styled.ul`
     position: absolute;
     box-shadow: rgba(50, 50, 93, 0.23) 0 20px 20px -20px;
     left: 0;
-    top: 8%;
+    top: 8vh;
     width: 100%;
-    background-color: white;
-    padding: 20px 0;
+    background-color: ${({ pageTitle }) =>
+      pageTitle === "Home" ? "#f6ab00" : "#fff"};
+    padding: 6px 0 12px 0;
     li {
       padding: 32px;
       width: 100%;
       text-align: center;
-      font-size: 20px;
+      font-size: 1.8rem;
     }
   }
 `;

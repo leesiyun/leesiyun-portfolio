@@ -4,26 +4,21 @@ import styled from "styled-components";
 const BugerMenu = styled.button`
   border: none;
   background: none;
-  font-size: 20px;
   display: none;
-  padding: 2rem;
   @media (max-width: 768px) {
     position: absolute;
     display: block;
-    right: 2rem;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
+    right: 1.5vw;
+    width: 50px;
+    height: 50px;
     transition: all 0.5s ease-in-out;
 
     div {
-      width: 2rem;
-      height: 0.3rem;
+      width: 30px;
+      height: 4px;
       background: ${({ mobileMenuToggle }) =>
         mobileMenuToggle ? "transparent" : "black"};
       border-radius: 10px;
-      box-shadow: 0 2px 5px raba(255, 101, 47, 0.2);
       transition: all 0.2s ease-in-out;
     }
 
@@ -31,9 +26,9 @@ const BugerMenu = styled.button`
     div::after {
       content: " ";
       position: absolute;
-      right: 1rem;
-      width: 2rem;
-      height: 0.3rem;
+      right: 20px;
+      width: 30px;
+      height: 4px;
       border-radius: 10px;
       background: black;
       box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
@@ -44,14 +39,14 @@ const BugerMenu = styled.button`
       transform: ${({ mobileMenuToggle }) =>
         mobileMenuToggle
           ? "rotate(-45deg) translate(2px, 2px)"
-          : "translateY(-10px)"};
+          : "translateY(-9px)"};
     }
 
     div::after {
       transform: ${({ mobileMenuToggle }) =>
         mobileMenuToggle
           ? "rotate(45deg) translate(2px, -2px )"
-          : "translateY(10px)"};
+          : "translateY(9px)"};
     }
   }
 `;

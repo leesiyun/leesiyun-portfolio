@@ -11,6 +11,14 @@ const GlobalStyles = createGlobalStyle`
             font-family: "Poppins", sans-serif;
         }
 
+    html,
+    body {
+                font-size: 62.5%;
+                line-height: 1.285;
+                width: 100%;
+                height: 100%;
+            }
+
     a {
             text-decoration: none;
             color: black;
@@ -19,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
     li {
             list-style: none;
         }
+
 `;
 
 export default GlobalStyles;

@@ -2,11 +2,7 @@ import * as React from "react";
 import Layout from "../components/Layout";
 
 const CarrerPage = () => {
-  return (
-    <Layout pageTitle="Carrer Page">
-      <p>Carrer Page</p>
-    </Layout>
-  );
+  return <Layout pageTitle="Carrer"></Layout>;
 };
 
 export default CarrerPage;
