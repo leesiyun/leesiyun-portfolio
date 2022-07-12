@@ -2,13 +2,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const strapiConfig = {
-  apiURL: process.env.STRAPI_API_URL,
-  accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ["category", "post"],
-  queryLimit: 1000,
-};
-
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -22,8 +15,11 @@ module.exports = {
     "gatsby-plugin-fontawesome-css",
     "gatsby-plugin-styled-components",
     {
-      resolve: `gatsby-source-strapi`,
-      options: strapiConfig,
+      resolve: "gatsby-source-contentful",
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
     },
   ],
 };
