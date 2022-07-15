@@ -8,7 +8,7 @@ const GlobalStyles = createGlobalStyle`
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
+            
         }
 
     html,
@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
                 line-height: 1.285;
                 width: 100%;
                 height: 100%;
+                font-family: "Poppins", sans-serif;
             }
 
     a {

@@ -14,10 +14,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     query {
       allContentfulPost(filter: { node_locale: { eq: "ko" } }) {
         nodes {
+          category
           slug
+          icon
           title
+          heroImage {
+            gatsbyImageData(layout: FULL_WIDTH)
+            description
+          }
           content {
-            raw
+            childMdx {
+              body
+            }
           }
         }
       }
@@ -31,12 +39,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allContentfulPost.nodes.forEach((node) => {
     createPage({
-      path: `${node.slug}`,
+      path: `${node.category}/${node.slug}`,
       component: postTemplate,
       context: {
+        icon: node.icon,
         title: node.title,
-        content: node.content,
+        content: node.content.childMdx.body,
       },
+      heroImage: node.heroImage,
     });
   });
 };

@@ -2,13 +2,17 @@ import styled from "styled-components";
 
 const NavbarStyle = styled.nav`
   display: flex;
-  height: 8vh;
+  height: 5.5vh;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 30px;
+  padding: 40px;
   width: 100%;
   background-color: ${({ pageTitle }) =>
-    pageTitle === "Home" ? "#f6ab00" : ""};
+    pageTitle === "Home" ? "#f6ab00" : "#fff"};
+  font-family: "Poppins", sans-serif;
+  top: 0;
+  position: fixed;
+  z-index: 10;
 `;
 
 const Logo = styled.h3`

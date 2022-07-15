@@ -9,18 +9,26 @@ import siyunCharacter from "../assets/images/siyun.jpg";
 
 const HomeBackground = styled.div`
   background: linear-gradient(-10.5deg, #fff 50%, #f6ab00 50%);
-  height: 900px;
+  min-height: 900px;
+  max-height: 980px;
+  width: 100%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: fixed;
+  @media (max-width: 768px) {
+    position: relative;
+  } ;
 `;
 
 const Title = styled.div`
-  padding-top: 2vh;
+  padding-top: 5vh;
   font-size: 6rem;
   font-weight: 600;
   span {
     color: #fff;
   }
   @media (max-width: 768px) {
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: 5rem;
   } ;
 `;
@@ -99,13 +107,21 @@ const HomePage = () => {
               leesiyun.official@gmail.com
             </li>
             <li>
-              <a href="https://github.com/leesiyun" target="_blank">
+              <a
+                href="https://github.com/leesiyun"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <ContactListIcon icon={BrandsIcons.faGithub} />
                 github.com/leesiyun
               </a>
             </li>
             <li>
-              <a href="https://www.wantedly.com/id/leesiyun" target="_blank">
+              <a
+                href="https://www.wantedly.com/id/leesiyun"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <ContactListIcon icon={SoildIcons.faW} />
                 wantedly.com/id/leesiyun
               </a>

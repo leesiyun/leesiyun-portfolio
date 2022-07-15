@@ -2,9 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const MainStyle = styled.main`
-  text-align: center;
   width: 100%;
   height: 92vh;
+  font-size: 1.7rem;
+  margin-top: 5.5vh;
+  @media (max-width: 768px) {
+    margin-top: 7vh;
+  }
 `;
 
 const Main = ({ children, setMobileMenuToggle }) => {

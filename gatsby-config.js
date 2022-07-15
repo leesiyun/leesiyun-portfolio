@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-remark-images",
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
     "gatsby-plugin-fontawesome-css",
@@ -19,6 +20,7 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        downloadLocal: true,
       },
     },
   ],
