@@ -12,12 +12,12 @@ const BackgroudColor = styled.div`
 `;
 
 const PostTitle = styled.h1`
-  font-size: 45px;
-  font-weight: 800;
   padding: 60px 40px 45px 80px;
+  font-weight: 800;
+  font-size: 45px;
   @media (max-width: 768px) {
-    font-size: 29px;
     padding: 50px 40px 45px 40px;
+    font-size: 29px;
   }
 `;
 

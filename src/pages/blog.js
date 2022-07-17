@@ -7,10 +7,10 @@ const BackgroudColor = styled.div`
   margin-top: 80px;
   background-color: #f6ab00;
   width: 100%;
-  height: 19vh;
+  height: 20vh;
   min-height: 190px;
   div {
-    padding: 120px 40px 30px 80px;
+    padding: 95px 40px 30px 80px;
     font-weight: 800;
     font-size: 60px;
     text-align: center;
@@ -21,7 +21,7 @@ const BackgroudColor = styled.div`
   }
 `;
 
-const BlogMain = styled.div`
+const Main = styled.div`
   padding: 70px 10vw;
   margin-left: 10px;
   font-size: 23px;
@@ -52,7 +52,7 @@ const BlogPage = ({
       <BackgroudColor>
         <div>Blog</div>
       </BackgroudColor>
-      <BlogMain>
+      <Main>
         <ul>
           {nodes
             .filter((node) => node.category === "blog")
@@ -63,7 +63,7 @@ const BlogPage = ({
               </li>
             ))}
         </ul>
-      </BlogMain>
+      </Main>
     </Layout>
   );
 };

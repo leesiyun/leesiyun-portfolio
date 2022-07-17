@@ -9,11 +9,10 @@ import siyunCharacter from "../assets/images/siyun.jpg";
 
 const HomeBackground = styled.div`
   background: linear-gradient(-10.5deg, #fff 50%, #f6ab00 50%);
-  min-height: 900px;
+  min-height: 940px;
   max-height: 980px;
   width: 100%;
   text-align: center;
-  font-family: "Poppins", sans-serif;
   position: fixed;
   @media (max-width: 768px) {
     position: relative;
@@ -22,14 +21,14 @@ const HomeBackground = styled.div`
 
 const Title = styled.div`
   padding-top: 5vh;
-  font-size: 6rem;
-  font-weight: 600;
+  font-size: 75px;
+  font-weight: 700;
   span {
     color: #fff;
   }
   @media (max-width: 768px) {
     padding-top: 40px;
-    font-size: 5rem;
+    font-size: 55px;
   } ;
 `;
 
@@ -55,7 +54,7 @@ const Content = styled.div`
 `;
 
 const Contact = styled.div`
-  margin-top: 12vh;
+  margin-top: 10vh;
   font-size: 2.5rem;
   font-family: "Suez One", serif;
   @media (max-width: 768px) {

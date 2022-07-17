@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@fontsource/nanum-gothic-coding": "^4.5.7",
     "@fontsource/open-sans": "^4.5.10",
     "@fontsource/poppins": "^4.5.8",
     "@fontsource/suez-one": "^4.5.8",

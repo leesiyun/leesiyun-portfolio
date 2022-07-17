@@ -5,7 +5,7 @@ const NavbarStyle = styled.nav`
   height: 5.5vh;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 40px 28px;
   width: 100%;
   background-color: ${({ pageTitle }) =>
     pageTitle === "Home" ? "#f6ab00" : "#fff"};

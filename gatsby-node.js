@@ -16,12 +16,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         nodes {
           category
           slug
-          icon
           title
-          heroImage {
-            gatsbyImageData(layout: FULL_WIDTH)
-            description
-          }
           content {
             childMdx {
               body
@@ -42,11 +37,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: `${node.category}/${node.slug}`,
       component: postTemplate,
       context: {
-        icon: node.icon,
         title: node.title,
         content: node.content.childMdx.body,
       },
-      heroImage: node.heroImage,
     });
   });
 };

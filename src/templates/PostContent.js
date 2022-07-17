@@ -22,9 +22,20 @@ const H3 = styled.h3`
 `;
 
 const P = styled.p`
-  margin-bottom: 8px;
+  margin-bottom: 11px;
+  color: #68686a;
   @media (max-width: 768px) {
     font-size: 15px;
+  }
+`;
+
+const Link = styled.a`
+  color: #1f70de;
+  &:hover {
+    color: #1755a9;
+  }
+  span {
+    margin-right: 5px;
   }
 `;
 
@@ -36,10 +47,15 @@ const PostContent = ({ postContent }) => {
   return (
     <MDXProvider
       components={{
-        h2: (props) => <H2 {...props}></H2>,
-        h3: (props) => <H3 {...props}></H3>,
-        p: (props) => <P {...props}></P>,
-        img: (props) => <Img {...props}></Img>,
+        h2: (props) => <H2 {...props} />,
+        h3: (props) => <H3 {...props} />,
+        p: (props) => <P {...props} />,
+        a: (props) => (
+          <Link>
+            🔗 <span {...props} />
+          </Link>
+        ),
+        img: (props) => <Img {...props} />,
       }}
     >
       <MDXRenderer>{postContent}</MDXRenderer>
