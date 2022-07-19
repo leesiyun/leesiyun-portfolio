@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const MainStyle = styled.main`
   width: 100%;
-  height: 92vh;
+  height: 85vh;
   font-size: 16px;
   margin-top: 5.5vh;
   @media (max-width: 768px) {

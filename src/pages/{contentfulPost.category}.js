@@ -1,21 +1,25 @@
-import * as React from "react";
+import React from "react";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import { graphql, Link } from "gatsby";
 
-const BackgroudColor = styled.div`
+const Header = styled.header`
   margin-top: 80px;
   background-color: #f6ab00;
   width: 100%;
-  height: 20vh;
-  min-height: 190px;
+  height: 10vh;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
   div {
-    padding: 95px 40px 30px 80px;
+    width: 100%;
     font-weight: 800;
     font-size: 60px;
     text-align: center;
-    @media (max-width: 768px) {
-      padding: 90px 40px 45px 40px;
+  }
+  @media (max-width: 768px) {
+    min-height: 200px;
+    div {
       font-size: 40px;
     }
   }
@@ -42,20 +46,21 @@ const Main = styled.div`
   }
 `;
 
-const BlogPage = ({
+const categories = ({
   data: {
+    contentfulPost: { category },
     allContentfulPost: { nodes },
   },
 }) => {
   return (
-    <Layout pageTitle="Blog">
-      <BackgroudColor>
-        <div>Blog</div>
-      </BackgroudColor>
+    <Layout pageTitle={category}>
+      <Header>
+        <div>{category}</div>
+      </Header>
       <Main>
         <ul>
           {nodes
-            .filter((node) => node.category === "blog")
+            .filter((node) => node.category === category)
             .map((node, index) => (
               <li key={index}>
                 <Link to={node.slug}>{node.title}</Link>
@@ -68,10 +73,13 @@ const BlogPage = ({
   );
 };
 
-export default BlogPage;
+export default categories;
 
 export const query = graphql`
-  query {
+  query ($id: String) {
+    contentfulPost(id: { eq: $id }) {
+      category
+    }
     allContentfulPost(filter: { node_locale: { eq: "ko" } }) {
       nodes {
         id

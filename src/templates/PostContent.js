@@ -26,16 +26,14 @@ const P = styled.p`
   color: #68686a;
   @media (max-width: 768px) {
     font-size: 15px;
+    margin-bottom: 15px;
   }
 `;
 
-const Link = styled.a`
+const A = styled.span`
   color: #1f70de;
   &:hover {
     color: #1755a9;
-  }
-  span {
-    margin-right: 5px;
   }
 `;
 
@@ -50,11 +48,8 @@ const PostContent = ({ postContent }) => {
         h2: (props) => <H2 {...props} />,
         h3: (props) => <H3 {...props} />,
         p: (props) => <P {...props} />,
-        a: (props) => (
-          <Link>
-            🔗 <span {...props} />
-          </Link>
-        ),
+        a: (props) => <A {...props} />,
+
         img: (props) => <Img {...props} />,
       }}
     >

@@ -16,7 +16,6 @@ const GlobalStyles = createGlobalStyle`
                 font-size: 62.5%;
                 line-height: 1.285;
                 width: 100%;
-                height: 100%;
                 font-family: "Poppins", sans-serif;
             }
 

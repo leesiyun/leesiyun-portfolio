@@ -43,7 +43,7 @@ const NavLinks = styled.ul`
     width: 100%;
     background-color: ${({ pageTitle }) =>
       pageTitle === "Home" ? "#f6ab00" : "#fff"};
-    padding: 6px 0 12px 0;
+    padding: 10px 0 22px 0;
     li {
       padding: 32px;
       width: 100%;

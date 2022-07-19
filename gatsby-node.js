@@ -34,10 +34,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allContentfulPost.nodes.forEach((node) => {
     createPage({
-      path: `${node.category}/${node.slug}`,
+      path: `${node.category.toLowerCase()}/${node.slug}`,
       component: postTemplate,
       context: {
         title: node.title,
+        category: node.category,
         content: node.content.childMdx.body,
       },
     });

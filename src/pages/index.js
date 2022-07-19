@@ -9,18 +9,15 @@ import siyunCharacter from "../assets/images/siyun.jpg";
 
 const HomeBackground = styled.div`
   background: linear-gradient(-10.5deg, #fff 50%, #f6ab00 50%);
-  min-height: 940px;
-  max-height: 980px;
+  min-height: 980px;
+  max-height: 1200px;
   width: 100%;
   text-align: center;
-  position: fixed;
-  @media (max-width: 768px) {
-    position: relative;
-  } ;
+  position: relative;
 `;
 
 const Title = styled.div`
-  padding-top: 5vh;
+  padding-top: 50px;
   font-size: 75px;
   font-weight: 700;
   span {
