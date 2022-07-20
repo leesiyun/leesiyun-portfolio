@@ -4,25 +4,23 @@ import styledComponents from "../styles/Navbar.styled";
 import { urlData } from "../assets/urlData";
 import MoblieBurgerMenu from "./MoblieBurgerMenu";
 
-const { NavbarStyle, Logo, NavLinks } = styledComponents;
+const { NavbarStyle } = styledComponents;
 
 const Navbar = ({ pageTitle, mobileMenuToggle, showMobileMenuToggle }) => {
   return (
-    <NavbarStyle pageTitle={pageTitle}>
+    <NavbarStyle pageTitle={pageTitle} mobileMenuToggle={mobileMenuToggle}>
       <Link to="/">
-        <Logo>SIYUN</Logo>
+        <h3>SIYUN</h3>
       </Link>
-      <NavLinks pageTitle={pageTitle} mobileMenuToggle={mobileMenuToggle}>
-        {urlData.map((url) => {
+      <ul>
+        {urlData.map((url, index) => {
           return (
-            <li key={url.title}>
-              <Link to={url.path} activeStyle={{ color: "#f6ab00" }}>
-                {url.title}
-              </Link>
+            <li key={index}>
+              <Link to={url.path}>{url.title}</Link>
             </li>
           );
         })}
-      </NavLinks>
+      </ul>
       <MoblieBurgerMenu
         mobileMenuToggle={mobileMenuToggle}
         showMobileMenuToggle={showMobileMenuToggle}

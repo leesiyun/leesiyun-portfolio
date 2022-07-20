@@ -2,18 +2,64 @@ import * as React from "react";
 import Layout from "../components/Layout";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import * as RegularIcons from "@fortawesome/free-regular-svg-icons";
-import * as BrandsIcons from "@fortawesome/free-brands-svg-icons";
-import * as SoildIcons from "@fortawesome/free-solid-svg-icons";
 import siyunCharacter from "../assets/images/siyun.jpg";
+import { contactData } from "../assets/contactData";
 
-const HomeBackground = styled.div`
+const HomePage = () => {
+  return (
+    <Layout pageTitle="Home">
+      <PageStyle>
+        <Title>
+          <span>SIYUN</span>'S PORTFOLIO
+        </Title>
+        <img src={siyunCharacter} alt="siyun character" />
+        <Content>
+          こんにちは <span>Front-End Developer</span> シユンです。
+        </Content>
+        <Contact>Contact</Contact>
+        <ContactListContainer>
+          <ul>
+            {contactData.map((contact, index) => {
+              return (
+                <li key={index}>
+                  {contact.link ? (
+                    <a href={contact.link} target="_blank" rel="noreferrer">
+                      <ContactListIcon icon={contact.icon} />
+                      {contact.text}
+                    </a>
+                  ) : (
+                    <>
+                      <ContactListIcon icon={contact.icon} />
+                      {contact.text}
+                    </>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </ContactListContainer>
+      </PageStyle>
+    </Layout>
+  );
+};
+
+export default HomePage;
+
+const PageStyle = styled.div`
   background: linear-gradient(-10.5deg, #fff 50%, #f6ab00 50%);
-  min-height: 980px;
+  min-height: 940px;
   max-height: 1200px;
   width: 100%;
   text-align: center;
   position: relative;
+  img {
+    display: flex;
+    border-radius: 50%;
+    width: 35%;
+    max-width: 280px;
+    min-width: 240px;
+    margin: 3vh auto;
+  }
 `;
 
 const Title = styled.div`
@@ -23,19 +69,11 @@ const Title = styled.div`
   span {
     color: #fff;
   }
+
   @media (max-width: 768px) {
     padding-top: 40px;
     font-size: 55px;
   } ;
-`;
-
-const Image = styled.img`
-  display: flex;
-  border-radius: 50%;
-  width: 35%;
-  max-width: 280px;
-  min-width: 240px;
-  margin: 3vh auto;
 `;
 
 const Content = styled.div`
@@ -83,54 +121,3 @@ const ContactListIcon = styled(FontAwesomeIcon)`
   height: 18px;
   width: 18px;
 `;
-
-const HomePage = () => {
-  return (
-    <Layout pageTitle="Home">
-      <HomeBackground>
-        <Title>
-          <span>SIYUN</span>'S PORTFOLIO
-        </Title>
-        <Image src={siyunCharacter} />
-        <Content>
-          こんにちは <span>Front-End Developer</span> シユンです。
-        </Content>
-        <Contact>Contact</Contact>
-        <ContactListContainer>
-          <ul>
-            <li>
-              <ContactListIcon icon={RegularIcons.faEnvelope} />
-              leesiyun.official@gmail.com
-            </li>
-            <li>
-              <a
-                href="https://github.com/leesiyun"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ContactListIcon icon={BrandsIcons.faGithub} />
-                github.com/leesiyun
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.wantedly.com/id/leesiyun"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ContactListIcon icon={SoildIcons.faW} />
-                wantedly.com/id/leesiyun
-              </a>
-            </li>
-            <li>
-              <ContactListIcon icon={SoildIcons.faLocationDot} />
-              Setagaya-ku, Tokyo
-            </li>
-          </ul>
-        </ContactListContainer>
-      </HomeBackground>
-    </Layout>
-  );
-};
-
-export default HomePage;

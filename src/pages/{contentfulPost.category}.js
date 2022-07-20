@@ -18,7 +18,7 @@ const Header = styled.header`
     text-align: center;
   }
   @media (max-width: 768px) {
-    min-height: 200px;
+    min-height: 160px;
     div {
       font-size: 40px;
     }

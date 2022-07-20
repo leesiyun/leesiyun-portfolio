@@ -12,7 +12,7 @@ export const urlData = [
     path: "/learn",
   },
   {
-    title: "Carrer",
-    path: "/carrer",
+    title: "Career",
+    path: "/career",
   },
 ];

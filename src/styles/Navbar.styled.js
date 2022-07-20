@@ -8,21 +8,22 @@ const NavbarStyle = styled.nav`
   padding: 40px 28px;
   width: 100%;
   background-color: ${({ pageTitle }) =>
-    pageTitle === "Home" ? "#f6ab00" : "#fff"};
+    (pageTitle === "Home") | (pageTitle === "Career") ? "#f6ab00" : "#fff"};
   font-family: "Poppins", sans-serif;
   top: 0;
   position: fixed;
   z-index: 10;
-`;
 
-const Logo = styled.h3`
-  font-size: 2.7rem;
-  padding-left: 1vw;
-  font-family: "Suez One", serif;
-`;
+  h3 {
+    font-size: 2.7rem;
+    padding-left: 1vw;
+    font-family: "Suez One", serif;
+  }
 
-const NavLinks = styled.ul`
-  display: flex;
+  ul {
+    display: flex;
+  }
+
   li {
     color: black;
     font-weight: 500;
@@ -32,18 +33,21 @@ const NavLinks = styled.ul`
   }
 
   @media (max-width: 768px) {
-    display: block;
-    opacity: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "1" : "0")};
-    visibility: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "" : "hidden")};
-    transition: opacity 0.2s;
-    position: absolute;
-    box-shadow: rgba(50, 50, 93, 0.23) 0 20px 20px -20px;
-    left: 0;
-    top: 8vh;
-    width: 100%;
-    background-color: ${({ pageTitle }) =>
-      pageTitle === "Home" ? "#f6ab00" : "#fff"};
-    padding: 10px 0 22px 0;
+    ul {
+      display: block;
+      opacity: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "1" : "0")};
+      visibility: ${({ mobileMenuToggle }) =>
+        mobileMenuToggle ? "" : "hidden"};
+      transition: opacity 0.2s;
+      position: absolute;
+      box-shadow: rgba(50, 50, 93, 0.23) 0 20px 20px -20px;
+      left: 0;
+      top: 8vh;
+      width: 100%;
+      background-color: ${({ pageTitle }) =>
+        (pageTitle === "Home") | (pageTitle === "Career") ? "#f6ab00" : "#fff"};
+      padding: 10px 0 22px 0;
+    }
     li {
       padding: 32px;
       width: 100%;
@@ -53,10 +57,6 @@ const NavLinks = styled.ul`
   }
 `;
 
-const styledComponents = {
-  NavbarStyle,
-  Logo,
-  NavLinks,
-};
+const styledComponents = { NavbarStyle };
 
 export default styledComponents;
