@@ -1,50 +1,9 @@
 import React from "react";
 import Layout from "../components/Layout";
-import styled from "styled-components";
+import styledComponents from "../styles/CategoryPage.styled";
 import { graphql, Link } from "gatsby";
 
-const Header = styled.header`
-  margin-top: 80px;
-  background-color: #f6ab00;
-  width: 100%;
-  height: 10vh;
-  min-height: 220px;
-  display: flex;
-  align-items: center;
-  div {
-    width: 100%;
-    font-weight: 800;
-    font-size: 60px;
-    text-align: center;
-  }
-  @media (max-width: 768px) {
-    min-height: 160px;
-    div {
-      font-size: 40px;
-    }
-  }
-`;
-
-const Main = styled.div`
-  padding: 70px 10vw;
-  margin-left: 10px;
-  font-size: 23px;
-  font-weight: 500;
-  li {
-    margin-bottom: 13px;
-    display: flex;
-    padding: 10px 3px 40px 3px;
-    cursor: pointer;
-    border-bottom: 1px solid #e6e6e6;
-  }
-  div {
-    margin-right: 15px;
-  }
-  @media (max-width: 768px) {
-    padding: 4vh 5vw;
-    font-size: 19px;
-  }
-`;
+const { CategoryPageStyle } = styledComponents;
 
 const categories = ({
   data: {
@@ -54,21 +13,23 @@ const categories = ({
 }) => {
   return (
     <Layout pageTitle={category}>
-      <Header>
-        <div>{category}</div>
-      </Header>
-      <Main>
-        <ul>
-          {nodes
-            .filter((node) => node.category === category)
-            .map((node, index) => (
-              <li key={index}>
-                <Link to={node.slug}>{node.title}</Link>
-                {/* <div>{node.date}</div> */}
-              </li>
-            ))}
-        </ul>
-      </Main>
+      <CategoryPageStyle>
+        <header>
+          <div>{category}</div>
+        </header>
+        <main>
+          <ul>
+            {nodes
+              .filter((node) => node.category === category)
+              .map((node, index) => (
+                <li key={index}>
+                  <Link to={node.slug}>{node.title}</Link>
+                  <div>{node.description.description}</div>
+                </li>
+              ))}
+          </ul>
+        </main>
+      </CategoryPageStyle>
     </Layout>
   );
 };
@@ -86,7 +47,9 @@ export const query = graphql`
         category
         slug
         title
-        date
+        description {
+          description
+        }
       }
     }
   }

@@ -22,7 +22,7 @@ const H3 = styled.h3`
 `;
 
 const P = styled.p`
-  margin-bottom: 11px;
+  margin-bottom: 16px;
   color: #68686a;
   @media (max-width: 768px) {
     font-size: 15px;
@@ -30,7 +30,7 @@ const P = styled.p`
   }
 `;
 
-const A = styled.span`
+const A = styled.a`
   color: #1f70de;
   &:hover {
     color: #1755a9;
@@ -48,7 +48,7 @@ const PostContent = ({ postContent }) => {
         h2: (props) => <H2 {...props} />,
         h3: (props) => <H3 {...props} />,
         p: (props) => <P {...props} />,
-        a: (props) => <A {...props} />,
+        a: (props) => <A {...props} target="_blank" rel="noreferrer" />,
 
         img: (props) => <Img {...props} />,
       }}

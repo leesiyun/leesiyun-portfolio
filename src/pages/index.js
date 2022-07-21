@@ -63,7 +63,7 @@ const PageStyle = styled.div`
 `;
 
 const Title = styled.div`
-  padding-top: 50px;
+  margin-top: 80px;
   font-size: 75px;
   font-weight: 700;
   span {

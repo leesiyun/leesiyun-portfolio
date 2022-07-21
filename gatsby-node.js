@@ -17,9 +17,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           category
           slug
           title
+          description {
+            description
+          }
           content {
             childMdx {
               body
+              tableOfContents
             }
           }
         }
@@ -39,7 +43,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: {
         title: node.title,
         category: node.category,
+        description: node.description.description,
         content: node.content.childMdx.body,
+        tableOfContents: node.content.childMdx.tableOfContents,
       },
     });
   });

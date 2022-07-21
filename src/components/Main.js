@@ -12,8 +12,4 @@ const MainStyle = styled.main`
   width: 100%;
   height: 85vh;
   font-size: 16px;
-  margin-top: 5.5vh;
-  @media (max-width: 768px) {
-    margin-top: 7vh;
-  }
 `;

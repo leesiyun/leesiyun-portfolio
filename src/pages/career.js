@@ -108,13 +108,13 @@ const PageStyle = styled.div`
 `;
 
 const Header = styled.header`
-  margin-top: 80px;
   width: 100%;
   height: 10vh;
   min-height: 220px;
   display: flex;
   align-items: center;
   div {
+    margin: 90px 0 30px 0;
     width: 100%;
     font-weight: 800;
     font-size: 60px;
@@ -131,7 +131,7 @@ const Header = styled.header`
 const ImgWrapper = styled.div`
   display: flex;
   width: 280px;
-  height: 280px;
+  height: 270px;
   background-color: #fff;
   border-radius: 50%;
   padding: 45px;

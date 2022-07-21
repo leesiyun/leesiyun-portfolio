@@ -11,7 +11,20 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-remark-images",
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-autolink-headers",
+            options: {
+              offsetY: `100`,
+              maintainCase: true,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
     "gatsby-plugin-fontawesome-css",
     "gatsby-plugin-styled-components",
