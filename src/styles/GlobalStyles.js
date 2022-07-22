@@ -1,32 +1,39 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import normalize from "styled-normalize";
 
 const GlobalStyles = createGlobalStyle`
     ${normalize};
-
-    * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            
+    ${() => {
+      return css`
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
         }
 
-    html,
-    body {
-                font-size: 62.5%;
-                line-height: 1.285;
-                width: 100%;
-                font-family: "Poppins", sans-serif;
-            }
-
-    a {
-            text-decoration: none;
-            color: black;
+        html {
+          scroll-padding-top: 83px;
         }
 
-    li {
-            list-style: none;
+        html,
+        body {
+          font-size: 62.5%;
+          width: 100%;
+          line-height: 1.285;
+          font-family: "Poppins", sans-serif;
         }
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        li {
+          list-style: none;
+        }
+      `;
+    }}
+
 
 `;
 

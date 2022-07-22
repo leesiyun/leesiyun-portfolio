@@ -10,6 +10,5 @@ export default Main;
 
 const MainStyle = styled.main`
   width: 100%;
-  height: 85vh;
   font-size: 16px;
 `;

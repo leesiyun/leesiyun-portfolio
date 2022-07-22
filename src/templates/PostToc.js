@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 const PostToc = ({ toc }) => {
   return (
@@ -17,7 +18,7 @@ const TocElement = ({ toc }) => {
         {toc.items &&
           toc.items.map((item, index) => (
             <li key={index}>
-              <a href={item.url}>{item.title}</a>
+              <Link to={`${item.url}`}>{item.title}</Link>
             </li>
           ))}
       </ul>

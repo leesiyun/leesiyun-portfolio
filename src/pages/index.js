@@ -47,8 +47,9 @@ export default HomePage;
 
 const PageStyle = styled.div`
   background: linear-gradient(-10.5deg, #fff 50%, #f6ab00 50%);
-  min-height: 940px;
-  max-height: 1200px;
+  min-height: 1050px;
+  max-height: 1400px;
+  padding-top: 80px;
   width: 100%;
   text-align: center;
   position: relative;
@@ -63,7 +64,7 @@ const PageStyle = styled.div`
 `;
 
 const Title = styled.div`
-  margin-top: 80px;
+  margin-top: 40px;
   font-size: 75px;
   font-weight: 700;
   span {
@@ -71,8 +72,8 @@ const Title = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-top: 40px;
     font-size: 55px;
+    margin-top: 20px;
   } ;
 `;
 
