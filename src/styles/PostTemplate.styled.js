@@ -19,9 +19,22 @@ const PostTemplateStyle = styled.div`
   }
 
   main {
+    color: #43413c;
     padding: 5vh 14vw;
+
     span {
       color: #68686a;
+    }
+
+    p,
+    li {
+      code {
+        padding: 1.5px 5px;
+        background-color: #f2f1f1;
+        color: #eb5657;
+        font-size: 14px;
+        border-radius: 5px;
+      }
     }
   }
 

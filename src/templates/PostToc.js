@@ -4,15 +4,7 @@ import { Link } from "gatsby";
 
 const PostToc = ({ toc }) => {
   return (
-    <aside>
-      <TocElement toc={toc} />
-    </aside>
-  );
-};
-
-const TocElement = ({ toc }) => {
-  return (
-    <TocElementStyle>
+    <PostTocStyle>
       <ul>
         <div>Table Of Contents</div>
         {toc.items &&
@@ -22,15 +14,16 @@ const TocElement = ({ toc }) => {
             </li>
           ))}
       </ul>
-    </TocElementStyle>
+    </PostTocStyle>
   );
 };
 
 export default PostToc;
 
-const TocElementStyle = styled.div`
-  padding: 40px 0 50px 0;
+const PostTocStyle = styled.div`
+  padding: 50px 0 50px 0;
   border-bottom: 1px solid #e6e6e6;
+  color: #43413c;
 
   div {
     font-size: 24px;

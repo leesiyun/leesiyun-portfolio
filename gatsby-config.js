@@ -12,19 +12,6 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-remark-images",
     {
-      resolve: "gatsby-plugin-mdx",
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: "gatsby-remark-autolink-headers",
-          },
-        ],
-      },
-    },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-fontawesome-css",
-    "gatsby-plugin-styled-components",
-    {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -32,5 +19,22 @@ module.exports = {
         downloadLocal: true,
       },
     },
+    {
+      resolve: "gatsby-plugin-mdx",
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+            },
+          },
+          "gatsby-remark-autolink-headers",
+        ],
+      },
+    },
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-fontawesome-css",
+    "gatsby-plugin-styled-components",
   ],
 };

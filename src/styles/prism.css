@@ -1,0 +1,25 @@
+.gatsby-highlight {
+  float: left; /* 1 */
+  width: 100%; /* 2 */
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  overflow: hidden;
+  margin: 25px 0 45px;
+  border-radius: 10px;
+  padding-left: 25px;
+  font-size: 16px;
+}
+
+.gatsby-highlight code[class*="language-"] {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+  .gatsby-highlight pre[class*="language-"] {
+    margin: 20px 0 40px;
+    padding-left: 15px;
+    font-size: 13px;
+  }
+}
