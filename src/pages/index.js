@@ -47,8 +47,8 @@ export default HomePage;
 
 const PageStyle = styled.div`
   background: linear-gradient(-10.5deg, #fff 50%, #f6ab00 50%);
-  min-height: 1050px;
-  max-height: 1400px;
+  min-height: 1150px;
+  max-height: 1500px;
   padding-top: 80px;
   width: 100%;
   text-align: center;
@@ -61,6 +61,13 @@ const PageStyle = styled.div`
     min-width: 240px;
     margin: 3vh auto;
   }
+  @media (max-width: 768px) {
+    min-height: 1100px;
+  }
+
+  @media (max-width: 280px) {
+    min-height: 1010px;
+  } ;
 `;
 
 const Title = styled.div`
@@ -74,6 +81,10 @@ const Title = styled.div`
   @media (max-width: 768px) {
     font-size: 55px;
     margin-top: 20px;
+  }
+
+  @media (max-width: 280px) {
+    font-size: 45px;
   } ;
 `;
 
@@ -86,6 +97,14 @@ const Content = styled.div`
   @media (max-width: 768px) {
     margin-top: 100px;
     font-size: 1.7rem;
+  }
+
+  @media (max-width: 280px) {
+    margin-top: 60px;
+    span {
+      display: block;
+      padding: 5px 0;
+    }
   } ;
 `;
 

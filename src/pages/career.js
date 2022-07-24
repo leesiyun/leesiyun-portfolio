@@ -19,7 +19,6 @@ const CareerPage = () => {
               <span>ビーハイブネット</span>
               <Date>2021.01 - 2022.06</Date>
             </Company>
-
             <ul>
               <li>
                 <div>H社</div>
@@ -147,10 +146,21 @@ const ImgWrapper = styled.div`
     width: 250px;
     height: 250px;
     margin: 0 auto;
-    padding: 30px;
+
     img {
       width: 190px;
       height: 80px;
+    }
+  }
+
+  @media (max-width: 280px) {
+    width: 220px;
+    height: 220px;
+    padding: 20px;
+
+    img {
+      width: 185px;
+      height: 75px;
     }
   }
 `;
@@ -159,6 +169,7 @@ const CareerContainer = styled.div`
   display: flex;
   margin: 2vh 10vw;
   justify-content: center;
+  color: #43413c;
   @media (max-width: 768px) {
     display: block;
     justify-content: center;
@@ -186,6 +197,7 @@ const CareerContent = styled.div`
     width: 100%;
     border-left: none;
     padding: 0;
+    font-size: 15px;
     ul {
       padding-left: 2vw;
     }

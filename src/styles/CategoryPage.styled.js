@@ -28,12 +28,12 @@ const CategoryPageStyle = styled.div`
       padding: 18px 3px 40px 3px;
       cursor: pointer;
       border-bottom: 1px solid #e6e6e6;
-      div {
-        margin-top: 30px;
-        color: #68686a;
-        font-size: 16px;
-        display: block;
-      }
+    }
+    div {
+      margin-top: 30px;
+      color: #68686a;
+      font-size: 14px;
+      display: block;
     }
   }
 

@@ -33,6 +33,10 @@ const NavbarStyle = styled.nav`
   }
 
   @media (max-width: 768px) {
+    padding: 40px 22px;
+    h3 {
+      font-size: 25px;
+    }
     ul {
       display: block;
       opacity: ${({ mobileMenuToggle }) => (mobileMenuToggle ? "1" : "0")};
@@ -49,7 +53,7 @@ const NavbarStyle = styled.nav`
       padding: 10px 0 22px 0;
     }
     li {
-      padding: 32px;
+      padding: 42px 0;
       width: 100%;
       text-align: center;
       font-size: 1.8rem;

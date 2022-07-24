@@ -21,6 +21,7 @@ const PostTemplateStyle = styled.div`
   main {
     color: #43413c;
     padding: 5vh 14vw;
+    line-height: 2;
 
     span {
       color: #68686a;
