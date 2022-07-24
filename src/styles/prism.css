@@ -1,6 +1,6 @@
 .gatsby-highlight {
   float: left; /* 1 */
-  width: 100%; /* 2 */
+  width: 98%; /* 2 */
 }
 
 .gatsby-highlight pre[class*="language-"] {

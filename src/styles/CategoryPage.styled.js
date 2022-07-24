@@ -23,19 +23,17 @@ const CategoryPageStyle = styled.div`
     font-size: 22px;
     font-weight: 500;
     display: flex;
-    ul {
-    }
     li {
       margin-bottom: 13px;
       padding: 18px 3px 40px 3px;
       cursor: pointer;
       border-bottom: 1px solid #e6e6e6;
-    }
-    div {
-      margin-top: 30px;
-      color: #68686a;
-      font-size: 16px;
-      display: block;
+      div {
+        margin-top: 30px;
+        color: #68686a;
+        font-size: 16px;
+        display: block;
+      }
     }
   }
 
@@ -48,6 +46,7 @@ const CategoryPageStyle = styled.div`
     }
 
     main {
+      margin-left: 0px;
       padding: 4vh 5vw;
       font-size: 19px;
     }

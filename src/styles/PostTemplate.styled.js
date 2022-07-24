@@ -26,14 +26,18 @@ const PostTemplateStyle = styled.div`
       color: #68686a;
     }
 
+    h1,
+    h2,
+    h3,
     p,
     li {
       code {
-        padding: 1.5px 5px;
+        padding: 1.3px 5px;
         background-color: #f2f1f1;
         color: #eb5657;
         font-size: 14px;
         border-radius: 5px;
+        word-break: break-all;
       }
     }
   }

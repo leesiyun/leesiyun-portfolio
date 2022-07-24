@@ -6,7 +6,6 @@ import styled from "styled-components";
 const P = styled.p`
   margin-bottom: 16px;
   color: #68686a;
-  word-break: break-word;
 
   @media (max-width: 768px) {
     font-size: 15px;

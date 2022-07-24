@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
         body {
           font-size: 62.5%;
           width: 100%;
-          line-height: 1.285;
+          line-height: 2;
           font-family: "Poppins", sans-serif;
         }
 
