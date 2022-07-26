@@ -20,7 +20,7 @@ const H1 = styled.h1`
 `;
 
 const H2 = styled.h2`
-  margin: 40px 0 16px 0;
+  margin: 30px 0 16px 0;
   font-size: 26px;
   font-weight: 600;
   @media (max-width: 768px) {
