@@ -107,6 +107,7 @@ const PageStyle = styled.div`
 `;
 
 const Header = styled.header`
+  user-select: none;
   width: 100%;
   height: 10vh;
   min-height: 220px;
@@ -128,6 +129,7 @@ const Header = styled.header`
 `;
 
 const ImgWrapper = styled.div`
+  user-select: none;
   display: flex;
   width: 280px;
   height: 270px;
@@ -146,7 +148,7 @@ const ImgWrapper = styled.div`
     width: 250px;
     height: 250px;
     margin: 0 auto;
-
+    padding: 38px;
     img {
       width: 190px;
       height: 80px;
@@ -157,7 +159,6 @@ const ImgWrapper = styled.div`
     width: 220px;
     height: 220px;
     padding: 20px;
-
     img {
       width: 185px;
       height: 75px;

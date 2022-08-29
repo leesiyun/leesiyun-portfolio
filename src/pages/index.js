@@ -6,6 +6,7 @@ import siyunCharacter from "../assets/images/siyun.jpg";
 import { contactData } from "../assets/contactData";
 
 const HomePage = () => {
+  console.log("一緒に働きませんか？😎　https://wantedly.com/id/leesiyun");
   return (
     <Layout pageTitle="Home">
       <PageStyle>
@@ -54,6 +55,7 @@ const PageStyle = styled.div`
   text-align: center;
   position: relative;
   img {
+    user-select: none;
     display: flex;
     border-radius: 50%;
     width: 35%;
@@ -61,6 +63,7 @@ const PageStyle = styled.div`
     min-width: 240px;
     margin: 3vh auto;
   }
+
   @media (max-width: 768px) {
     min-height: 1100px;
   }
@@ -71,6 +74,7 @@ const PageStyle = styled.div`
 `;
 
 const Title = styled.div`
+  user-select: none;
   margin-top: 40px;
   font-size: 75px;
   font-weight: 700;
@@ -91,9 +95,11 @@ const Title = styled.div`
 const Content = styled.div`
   margin-top: 11vh;
   font-size: 2rem;
+  user-select: none;
   span {
     font-weight: 700;
   }
+
   @media (max-width: 768px) {
     margin-top: 100px;
     font-size: 1.7rem;
@@ -109,6 +115,7 @@ const Content = styled.div`
 `;
 
 const Contact = styled.div`
+  user-select: none;
   margin-top: 10vh;
   font-size: 2.5rem;
   font-family: "Suez One", serif;

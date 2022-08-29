@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const CategoryPageStyle = styled.div`
+  user-select: none;
   header {
     background-color: #f6ab00;
     width: 100%;
@@ -23,6 +24,9 @@ const CategoryPageStyle = styled.div`
     font-size: 22px;
     font-weight: 500;
     display: flex;
+    ul {
+      width: 100%;
+    }
     li {
       margin-bottom: 13px;
       padding: 18px 3px 40px 3px;

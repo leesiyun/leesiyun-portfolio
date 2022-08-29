@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const NavbarStyle = styled.nav`
+  user-select: none;
   display: flex;
   height: 50px;
   justify-content: space-between;
