@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import ScrollToTop from "../components/ScrollToTop";
 import styledComponents from "../styles/CategoryPage.styled";
 import { graphql, Link } from "gatsby";
 
@@ -13,6 +14,7 @@ const categories = ({
 }) => {
   return (
     <Layout pageTitle={category}>
+      <ScrollToTop />
       <CategoryPageStyle>
         <header>
           <div>{category}</div>

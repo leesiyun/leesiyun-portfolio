@@ -1,11 +1,13 @@
 import * as React from "react";
 import Layout from "../components/Layout";
+import ScrollToTop from "../components/ScrollToTop";
 import styled from "styled-components";
 import bhivenet from "../assets/images/bhivenet.jpg";
 
 const CareerPage = () => {
   return (
     <Layout pageTitle="Career">
+      <ScrollToTop />
       <PageStyle>
         <Header>
           <div>Career</div>
