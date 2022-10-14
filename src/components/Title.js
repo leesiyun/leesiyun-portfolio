@@ -7,19 +7,19 @@ const Title = ({ pageTitle, data }) => (
   </title>
 );
 
-export default function MyTitle(props) {
-  return (
-    <StaticQuery
-      query={graphql`
-        query SiteTitleQuery {
-          site {
-            siteMetadata {
-              title
-            }
+const MyTitle = (props) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
           }
         }
-      `}
-      render={(data) => <Title data={data} {...props} />}
-    />
-  );
-}
+      }
+    `}
+    render={(data) => <Title data={data} {...props} />}
+  />
+);
+
+export default MyTitle;

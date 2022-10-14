@@ -49,21 +49,19 @@ const Img = styled.img`
   max-width: 100%;
 `;
 
-const PostContent = ({ postContent }) => {
-  return (
-    <MDXProvider
-      components={{
-        p: (props) => <P {...props} />,
-        h1: (props) => <H1 {...props} />,
-        h2: (props) => <H2 {...props} />,
-        h3: (props) => <H3 {...props} />,
-        a: (props) => <A {...props} target="_blank" rel="noreferrer" />,
-        img: (props) => <Img {...props} />,
-      }}
-    >
-      <MDXRenderer>{postContent}</MDXRenderer>
-    </MDXProvider>
-  );
-};
+const PostContent = ({ postContent }) => (
+  <MDXProvider
+    components={{
+      p: (props) => <P {...props} />,
+      h1: (props) => <H1 {...props} />,
+      h2: (props) => <H2 {...props} />,
+      h3: (props) => <H3 {...props} />,
+      a: (props) => <A {...props} target="_blank" rel="noreferrer" />,
+      img: (props) => <Img {...props} />,
+    }}
+  >
+    <MDXRenderer>{postContent}</MDXRenderer>
+  </MDXProvider>
+);
 
 export default PostContent;

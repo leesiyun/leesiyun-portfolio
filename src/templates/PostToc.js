@@ -2,21 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const PostToc = ({ toc }) => {
-  return (
-    <PostTocStyle>
-      <ul>
-        <div>Table Of Contents</div>
-        {toc.items &&
-          toc.items.map((item, index) => (
-            <li key={index}>
-              <Link to={`${item.url}`}>{item.title}</Link>
-            </li>
-          ))}
-      </ul>
-    </PostTocStyle>
-  );
-};
+const PostToc = ({ toc }) => (
+  <PostTocStyle>
+    <ul>
+      <div>Table Of Contents</div>
+      {toc.items &&
+        toc.items.map((item, index) => (
+          <li key={index}>
+            <Link to={`${item.url}`}>{item.title}</Link>
+          </li>
+        ))}
+    </ul>
+  </PostTocStyle>
+);
 
 export default PostToc;
 

@@ -1,5 +1,11 @@
 import { createGlobalStyle, css } from "styled-components";
 import normalize from "styled-normalize";
+import "@fontsource/suez-one";
+import "@fontsource/poppins";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/nanum-gothic-coding";
 
 const GlobalStyles = createGlobalStyle`
     ${normalize};

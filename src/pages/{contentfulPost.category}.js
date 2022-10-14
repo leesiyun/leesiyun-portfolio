@@ -11,30 +11,28 @@ const categories = ({
     contentfulPost: { category },
     allContentfulPost: { nodes },
   },
-}) => {
-  return (
-    <Layout pageTitle={category}>
-      <ScrollToTop />
-      <CategoryPageStyle>
-        <header>
-          <div>{category}</div>
-        </header>
-        <main>
-          <ul>
-            {nodes
-              .filter((node) => node.category === category)
-              .map((node, index) => (
-                <li key={index}>
-                  <Link to={node.slug}>{node.title}</Link>
-                  <div>{node.description.description}</div>
-                </li>
-              ))}
-          </ul>
-        </main>
-      </CategoryPageStyle>
-    </Layout>
-  );
-};
+}) => (
+  <Layout pageTitle={category}>
+    <ScrollToTop />
+    <CategoryPageStyle>
+      <header>
+        <div>{category}</div>
+      </header>
+      <main>
+        <ul>
+          {nodes
+            .filter((node) => node.category === category)
+            .map((node, index) => (
+              <li key={index}>
+                <Link to={node.slug}>{node.title}</Link>
+                <div>{node.description.description}</div>
+              </li>
+            ))}
+        </ul>
+      </main>
+    </CategoryPageStyle>
+  </Layout>
+);
 
 export default categories;
 
