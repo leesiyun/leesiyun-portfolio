@@ -41,7 +41,10 @@ export const query = graphql`
     contentfulPost(id: { eq: $id }) {
       category
     }
-    allContentfulPost(filter: { node_locale: { eq: "ko" } }) {
+    allContentfulPost(
+      filter: { node_locale: { eq: "ko" } }
+      sort: { fields: updatedAt, order: DESC }
+    ) {
       nodes {
         id
         category
